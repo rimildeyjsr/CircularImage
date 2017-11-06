@@ -10,16 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.layoutIfNeeded()
+        imageView.layer.cornerRadius = imageView.frame.width/2
+        imageView.layer.masksToBounds = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    // MARK: - outlets
+    
+    @IBOutlet weak var imageView: UIImageView!
 }
 
